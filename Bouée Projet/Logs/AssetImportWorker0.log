@@ -15,11 +15,11 @@ C:/Users/malau/Desktop/game design/M1 cours/p4 - projet autoformation/Project_Un
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52034
+55104
 Successfully changed project path to: C:/Users/malau/Desktop/game design/M1 cours/p4 - projet autoformation/Project_Unity_Autoformation/Bouée Projet
 C:/Users/malau/Desktop/game design/M1 cours/p4 - projet autoformation/Project_Unity_Autoformation/Bouée Projet
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 63.24 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 55.57 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
@@ -35,49 +35,49 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56056
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56760
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003902 seconds.
+Registered in 0.005073 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 65.23 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 73.88 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.011 seconds
+- Completed reload, in  2.180 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002385 seconds.
+Registered in 0.002391 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 61.06 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 62.22 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.684 seconds
+- Completed reload, in  1.643 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 85.0 MB.
+System memory in use before: 84.9 MB.
 System memory in use after: 84.9 MB.
 
 Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2235.
-Total: 3.277300 ms (FindLiveObjects: 0.407100 ms CreateObjectMapping: 0.212900 ms MarkObjects: 2.475400 ms  DeleteObjects: 0.179200 ms)
+Total: 4.614200 ms (FindLiveObjects: 0.303900 ms CreateObjectMapping: 0.094900 ms MarkObjects: 3.728700 ms  DeleteObjects: 0.483500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Animation
-  artifactKey: Guid(3038f7b9370b8dc49ae87c8e074d7942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animation using Guid(3038f7b9370b8dc49ae87c8e074d7942) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49c6c8ee3432986919dff9f0705216d2') in 0.012983 seconds
-  Import took 0.018994 seconds .
+  path: Assets/Menu
+  artifactKey: Guid(f0a45e1b9c2aa8b45a68f0f1e39cc5ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Menu using Guid(f0a45e1b9c2aa8b45a68f0f1e39cc5ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e5a92b4310cc8497c1b99b44f6a6fc4') in 0.011154 seconds
+  Import took 0.016311 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
