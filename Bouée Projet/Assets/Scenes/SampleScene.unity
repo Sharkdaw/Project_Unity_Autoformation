@@ -360,6 +360,9 @@ MonoBehaviour:
   oldSprite: {fileID: 21300000, guid: 5e161d291912c3b4594536e266a36de0, type: 3}
   sp: {fileID: 0}
   Vehicle: 0
+  AeroBouee: {fileID: 1369088966}
+  Jetpack: 0
+  jetpackForce: 20
 --- !u!1 &1369088966
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +374,6 @@ GameObject:
   - component: {fileID: 1369088968}
   - component: {fileID: 1369088967}
   - component: {fileID: 1369088969}
-  - component: {fileID: 1369088970}
   m_Layer: 0
   m_Name: bouee
   m_TagString: AeroBouee
@@ -470,19 +472,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1369088970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369088966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5839292ca2e14ad4d864fa9b66a964b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slime: {fileID: 0}
 --- !u!1 &1874135387
 GameObject:
   m_ObjectHideFlags: 0
