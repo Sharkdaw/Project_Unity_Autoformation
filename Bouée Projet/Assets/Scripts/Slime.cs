@@ -37,6 +37,7 @@ public class Slime : MonoBehaviour
 
                 Jetpack = true;
 
+                isJumping = true;
 
                 Destroy(bouee);
 
@@ -71,6 +72,8 @@ public class Slime : MonoBehaviour
 
                 speed = 2f;
 
+                isJumping = false;
+
             }
         }
     }
@@ -84,6 +87,7 @@ public class Slime : MonoBehaviour
             if (jetpackActive)
             {
                 rb.AddForce(new Vector2(0, jetpackForce));
+
             }
 
         }
