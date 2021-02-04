@@ -33,23 +33,19 @@ public class Slime : MonoBehaviour
 
         if (Input.GetKey("e")) //Lorsqu'on appuie sur la flèche du haut, si on est devant l'Aéro-Bouée, on change le sprite du slime et on détruit la bouée existante.
         {
-
             if (Vehicle == true) //Lorsque l'on est devant l'Aéro-Bouée, cette bool s'active.
 			{
-               
                 sp.sprite = newSprite;
 
                 runSpeed = 5f;
 
                 Jetpack = true;
 
-
                 isJumping = true;
 
-
+                animator.SetBool("IsVehicule", true);
 
                 Destroy(bouee);
-
             }
         }
 
@@ -59,6 +55,7 @@ public class Slime : MonoBehaviour
             {
                 rb.AddForce(Vector2.up * jumpPower);
                 isJumping = true;
+                animator.SetBool("IsJumping", true);
             }
         }
 
@@ -110,6 +107,7 @@ public class Slime : MonoBehaviour
 
                 isJumping = false;
 
+                animator.SetBool("IsVehicule", false);
             }
         }
     }
@@ -126,11 +124,11 @@ public class Slime : MonoBehaviour
             if (jetpackActive)
             {
                 rb.AddForce(new Vector2(0, jetpackForce));
-
             }
 
-        }
+            isJumping = true;
 
+        }
     }
 
 
@@ -139,8 +137,9 @@ public class Slime : MonoBehaviour
         if (platform.tag == "Ground")
         {
             isJumping = false;
-        }
 
+            animator.SetBool("IsJumping", false);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other) //Si on passe devant l'Aéro-Bouée, on peut monter dedans.
@@ -148,7 +147,6 @@ public class Slime : MonoBehaviour
         if (other.name == "bouee")
 		{
             Vehicle = true;
-
         }
     }
 
@@ -157,10 +155,8 @@ public class Slime : MonoBehaviour
         if (other.name == "bouee")
         {
             Vehicle = false;
-            
         }
     }
-
 }
          
 	
