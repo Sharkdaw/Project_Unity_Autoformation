@@ -438,7 +438,8 @@ GameObject:
   - component: {fileID: 1368562335}
   - component: {fileID: 1368562334}
   - component: {fileID: 1368562333}
-  m_Layer: 0
+  - component: {fileID: 1368562336}
+  m_Layer: 3
   m_Name: Slime
   m_TagString: Slime
   m_Icon: {fileID: 0}
@@ -485,7 +486,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5e161d291912c3b4594536e266a36de0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 135cde3c0a8bfb94cb76993e774d43da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -523,18 +524,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.14481813, y: 0.11467777}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.19, y: 1.36}
+    oldSize: {x: 3.2, y: 3.2}
     newSize: {x: 3.2, y: 3.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.5}
+  m_Size: {x: 1.2896363, y: 0.7168194}
   m_EdgeRadius: 0
 --- !u!50 &1368562334
 Rigidbody2D:
@@ -569,7 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb90f53f6c0505e4ab8d2f94e41624f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  runSpeed: 2
   platform: {fileID: 1874135387}
   bouee: {fileID: 1369088966}
   rb: {fileID: 1368562334}
@@ -582,6 +583,26 @@ MonoBehaviour:
   AeroBouee: {fileID: 1369088966}
   Jetpack: 0
   jetpackForce: 20
+  animator: {fileID: 1368562336}
+--- !u!95 &1368562336
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368562330}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3de0a647ec7a0ce4980719c2306a8f19, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1369088966
 GameObject:
   m_ObjectHideFlags: 0
