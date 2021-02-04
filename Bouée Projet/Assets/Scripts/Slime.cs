@@ -5,7 +5,7 @@ using UnityEngine;
 public class Slime : MonoBehaviour
 {
 
-    public float speed = 2f;
+    public float runSpeed = 2f;
     public GameObject platform, bouee; 
     public Rigidbody2D rb;
     public bool isJumping = false;
@@ -16,6 +16,9 @@ public class Slime : MonoBehaviour
     public GameObject AeroBouee;
     public bool Jetpack = false;
     public float jetpackForce = 75.0f;
+    public Animator animator;
+    float horizontalMove = 0f;
+    private bool Islookleft;
 
     void Start()
     {
@@ -25,6 +28,9 @@ public class Slime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Movement();
+
         if (Input.GetKey("e")) //Lorsqu'on appuie sur la flèche du haut, si on est devant l'Aéro-Bouée, on change le sprite du slime et on détruit la bouée existante.
         {
 
@@ -33,10 +39,9 @@ public class Slime : MonoBehaviour
                
                 sp.sprite = newSprite;
 
-                speed = 5f;
+                runSpeed = 5f;
 
                 Jetpack = true;
-
 
                 Destroy(bouee);
 
@@ -51,12 +56,39 @@ public class Slime : MonoBehaviour
                 isJumping = true;
             }
         }
-      
+
+
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetKey(KeyCode.LeftArrow))
-            rb.velocity = new Vector2(speed * -1, rb.velocity.y);
+            rb.velocity = new Vector2(runSpeed * -1, rb.velocity.y);
+
         if (Input.GetKey(KeyCode.RightArrow))
-            rb.velocity = new Vector2(speed, rb.velocity.y);
+            rb.velocity = new Vector2(runSpeed, rb.velocity.y);
+
+        void Movement()
+        {
+            if (horizontalMove > 0 && Islookleft == true)
+            {
+                Flip();
+            }
+            else if (horizontalMove < 0 && Islookleft == false)
+            {
+                Flip();
+            }
+
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        }
+
+        void Flip()
+        {
+            Islookleft = !Islookleft;
+            float x = transform.localScale.x * -1;
+            transform.localScale = new Vector2(x, transform.localScale.y);
+        }
+
 
 
         if (Input.GetKey("down")) //Lorsque l'on appuie sur la flèche du bas alors que l'on est avec le sprite du slime en Aéro-Bouée, on retrouve notre sprite d'avant et on perd en vitesse.
@@ -69,7 +101,7 @@ public class Slime : MonoBehaviour
 
                 Vehicle = false;
 
-                speed = 2f;
+                runSpeed = 2f;
 
             }
         }
@@ -77,6 +109,9 @@ public class Slime : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        //controller.Move(horizontalMove * Time.fixedDeltaTime, false, false);
+
         if (Jetpack == true)
         {
 
