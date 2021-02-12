@@ -4,7 +4,6 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
-
 	public bool isInRange;
 
         
@@ -13,6 +12,7 @@ public class DialogueTrigger : MonoBehaviour
 		if(isInRange && Input.GetKeyDown(KeyCode.E))
 		{
 			TriggerDialogue();
+										 
 		}
 			
 	}

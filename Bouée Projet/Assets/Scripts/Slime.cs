@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Slime : MonoBehaviour
 {
-
     public float runSpeed = 2f;
-    public GameObject platform, bouee; 
+    public GameObject platform, bouee, slime; 
     public Rigidbody2D rb;
     public bool isJumping = false;
     public float jumpPower;
@@ -19,6 +18,8 @@ public class Slime : MonoBehaviour
     public Animator animator;
     float horizontalMove = 0f;
     private bool Islookleft;
+    public bool IsFlying = false;
+
 
     void Start()
     {
@@ -45,7 +46,7 @@ public class Slime : MonoBehaviour
 
                 animator.SetBool("IsVehicule", true);
 
-                Destroy(bouee);
+                bouee.SetActive(false);
             }
         }
 
@@ -91,25 +92,36 @@ public class Slime : MonoBehaviour
             transform.localScale = new Vector2(x, transform.localScale.y);
         }
 
-
+                              
 
         if (Input.GetKey("down")) //Lorsque l'on appuie sur la flèche du bas alors que l'on est avec le sprite du slime en Aéro-Bouée, on retrouve notre sprite d'avant et on perd en vitesse.
         {
-            if (sp != newSprite)
+                                       
+            if ((sp != newSprite) && (IsFlying == false))
             {
-                sp.sprite = oldSprite;
 
-                Jetpack = false;
+               sp.sprite = oldSprite;
 
-                Vehicle = false;
+               Jetpack = false;
 
-                runSpeed = 2f;
+               Vehicle = false;
 
-                isJumping = false;
+               runSpeed = 2f;
 
-                animator.SetBool("IsVehicule", false);
+               isJumping = false;
+
+               animator.SetBool("IsVehicule", false);
+
+               bouee.SetActive(true);
+
+               bouee.transform.position = slime.transform.position;
             }
+                                      
         }
+
+             
+                               
+        
     }
 
     void FixedUpdate()
@@ -124,6 +136,8 @@ public class Slime : MonoBehaviour
             if (jetpackActive)
             {
                 rb.AddForce(new Vector2(0, jetpackForce));
+
+                IsFlying = true; 
             }
 
             isJumping = true;
@@ -139,6 +153,9 @@ public class Slime : MonoBehaviour
             isJumping = false;
 
             animator.SetBool("IsJumping", false);
+
+            IsFlying = false;
+
         }
     }
 
