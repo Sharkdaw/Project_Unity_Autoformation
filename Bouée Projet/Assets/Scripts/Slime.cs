@@ -47,6 +47,10 @@ public class Slime : MonoBehaviour
                 animator.SetBool("IsVehicule", true);
 
                 bouee.SetActive(false);
+
+                gameObject.GetComponent<BoxCollider2D>().size = new Vector2(2f, 2f);
+
+
             }
         }
 
@@ -115,6 +119,10 @@ public class Slime : MonoBehaviour
                bouee.SetActive(true);
 
                bouee.transform.position = slime.transform.position;
+
+                gameObject.GetComponent<BoxCollider2D>().size = new Vector2(1.5f, 1f);
+
+
             }
                                       
         }
