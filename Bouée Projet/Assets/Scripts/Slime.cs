@@ -97,7 +97,7 @@ public class Slime : MonoBehaviour
         if (Input.GetKey("down")) //Lorsque l'on appuie sur la flèche du bas alors que l'on est avec le sprite du slime en Aéro-Bouée, on retrouve notre sprite d'avant et on perd en vitesse.
         {
                                        
-            if ((sp != newSprite) && (IsFlying == false))
+            if ((sp != newSprite) && (IsFlying == false) && (Jetpack == true))
             {
 
                sp.sprite = oldSprite;
