@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/HomeAndWork.unity
+- path: Assets/Scenes/GobIndustries.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
