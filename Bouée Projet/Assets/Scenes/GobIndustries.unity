@@ -1494,6 +1494,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1207496763324074418, guid: b28e386f85affce4ca60e2ca02878cc6, type: 3}
+      propertyPath: Niveau
+      value: GobIndustries
+      objectReference: {fileID: 0}
     - target: {fileID: 1207496763324074419, guid: b28e386f85affce4ca60e2ca02878cc6, type: 3}
       propertyPath: m_Name
       value: Porte
