@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GobIndustries.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainMenu.unity
+    guid: 14a55ba4de572c2468f80311f2486ea7
+  - enabled: 1
+    path: Assets/Scenes/Appartement.unity
+    guid: f91f4c0a18adba841b42bd9c93451694
   - enabled: 1
     path: Assets/Scenes/HomeAndWork.unity
     guid: e9afda0c25f8b3549acd8a4490609b56
   - enabled: 1
-    path: Assets/Scenes/Appartement.unity
-    guid: f91f4c0a18adba841b42bd9c93451694
+    path: Assets/Scenes/GobIndustries.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
