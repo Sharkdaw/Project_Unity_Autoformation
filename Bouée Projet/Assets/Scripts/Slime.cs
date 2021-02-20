@@ -120,7 +120,7 @@ public class Slime : MonoBehaviour
 
                bouee.transform.position = slime.transform.position;
 
-                gameObject.GetComponent<BoxCollider2D>().size = new Vector2(1.5f, 1f);
+                gameObject.GetComponent<BoxCollider2D>().size = new Vector2(1.3f, 0.6f);
 
 
             }
