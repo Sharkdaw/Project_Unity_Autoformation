@@ -16,6 +16,7 @@ public class Slime : MonoBehaviour
     public bool Jetpack = false;
     public float jetpackForce = 75.0f;
     public Animator animator;
+    public Animator DoorAnimator;
     float horizontalMove = 0f;
     private bool Islookleft;
     public bool IsFlying = false;
@@ -45,6 +46,8 @@ public class Slime : MonoBehaviour
                 isJumping = true;
 
                 animator.SetBool("IsVehicule", true);
+
+                DoorAnimator.SetBool("Open", true);
 
                 bouee.SetActive(false);
 
